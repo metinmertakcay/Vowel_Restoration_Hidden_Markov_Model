@@ -11,16 +11,16 @@ Türkçede 29 harf bulunmaktadır. Bu harflerin 8'i seslidir. Sesli Harf Tamamla
 - Hazırlanmış derlem içerisindeki kelimeler okunmuştur.
 - Kelimelerin başlangıç ve bitişlerinin belirlenebilmesi için her bir kelimenin başına ve sonuna başlangıç ve bitişi belirtecek karakterler eklenmiştir.
 
-> 'elma'  --- '<elma>'
-> 'armut' --- '<armut>'
+> elma  `-->` `<elma>`
+> armut `-->` `<armut>`
 
 - Kullanıcı tarafından girilmiş sessiz harflerden sonra gelecek sesli harflerin bulunması gerekmektedir. Bu işlemin belirlenmesinde karakter bigramları kullanılmıştır. Karakter bigramlarının içerisinde bulunan karakterlerin birlikte geçme sayıları belirlenmiştir.
 
-> '<kaya>' --- ‘<k’, ‘ka’, ‘ay’, ‘ya’, ‘a>’
+> `<kaya>` `-->` `<k`, `ka`, `ay`, `ya`, `a>`
 
 - Bigramların oluşma durumu şu şekildedir. ‘Sesli harf – sessiz harf’, ‘sesli harf – sesli harf’, ‘sessiz harf – sesli harf’ ve ‘sessiz harf – sessiz harf’. Hidden Markov Model oluşturulurken her sessiz harf sonrasında bir sesli harfin geleceği varsayılmıştır. Ancak Türkçe’de iki sessiz harf yan yana gelebilmektedir. Bu durumu oluşturmuş modele uyarlayabilmek için boşluk karakterini (w) kullanılmıştır.
 
-> '<gömlek>' --- ‘<g’, ‘gö’, ‘öm’, ‘mw’, ‘wl’, ‘le’, ‘ek’, ‘k>’
+> `<gömlek>` `-->` `<g`, `gö`, `öm`, `mw`, `wl`, `le`, `ek`, `k>`
 
 - Karakterlerin birbiri ile geçme sayıları bulunduktan sonra olasılıkları hesaplanmıştır.
 - Kullanıcıdan sessiz harf girişi alınmış ve girilen sessiz harf dizgesinin başına ve sonuna ‘<’ ve ‘>’ karakterleri eklenmiştir.
